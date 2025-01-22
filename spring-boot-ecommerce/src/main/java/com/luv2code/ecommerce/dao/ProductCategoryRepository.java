@@ -13,8 +13,10 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
         PUT /product-category/{id}: Atualiza uma categoria de produtos.
         DELETE /product-category/{id}: Exclui uma categoria de produtos.
 
-        collectionResourceRel nome do Json de entrada
+        collectionResourceRel é o retorno da lista do json no postman, caso não use pega o nome da
+        entidade productCategories
         */
+//caso não utilize o path o caminho das chamadas seria /productCategories pega o nome da entidade
 @RepositoryRestResource(collectionResourceRel = "productCategory", path = "product-category")
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Long> {
 }
